@@ -10,6 +10,14 @@ from pygame.locals import *
 
 import mover
 
+#Please set server IP adress
+host = '127.0.0.1'
+port = 3794
+SCREEN_SIZE = (640, 480)
+SCREEN_RECT = Rect(0, 0, 640, 480)
+
+
+
 
 def limit(val, min_, max_):
     lst =[min_, val, max_]
@@ -68,11 +76,6 @@ def check_hit(Player1,Player2,Pack):
         Pack.vy = limit(Pack.vy, -5, 5)
 
 
-
-host = '192.168.11.12'
-port = 3794
-SCREEN_SIZE = (640, 480)
-SCREEN_RECT = Rect(0, 0, 640, 480)
 
 def main():
     pygame.init()
